@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+     <default-config> 
+        <property name="testConnectionOnCheckout">true</property>
+        <property name="automaticTestTable">con_test</property>
+        <property name="idleConnectionTestPeriod">300</property>
+        <property name="maxConnectionAge">14400</property>
+        
+
+        <!--  Including the preferredTestQuery property with variations of "select 1 from dual;"
+              causes the application to HANG when initiating the pool.
+              Variations tried:
+              select 1 from dual
+              select 1 from dual;
+              select * from dual
+              select * from dual;
+              select 1
+              select 1;
+         -->
+        <!--  <property name="preferredTestQuery">SELECT 1</property>  -->        
+      <property name="acquireRetryAttempts">30</property>
+      <property name="acquireRetryDelay">1000</property>
+      <property name="breakAfterAcquireFailure">false</property>
+      <!-- <property name="unreturnedConnectionTimeout">1800</property>  -->
+      <property name="debugUnreturnedConnectionStackTraces">true</property>        
+   </default-config>
+</c3p0-config>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<group id="admins" description="Amministratori">
+		<children>registrati</children>
+	</group>
+	<group id="registrati" description="Registrati" parent="admins" />
+	<user userId="roby" firstName="Roberto" surname="Mozzicato" password="C5C5A17BBF5D31171D022FB123416D1A">
+		<group>registrati</group>
+	</user>
+	<user userId="admin" firstName="" surname="Amministratore" password="21232F297A57A5A743894A0E4A801FC3">
+		<group>admins</group>
+	</user>
+
+	<uiElement elementId="menuClassi">
+		<authorizedGroup>admins</authorizedGroup>
+	</uiElement>
+
+	<uiElement elementId="menuPrenotazioni">
+		<authorizedGroup>registrati</authorizedGroup>
+	</uiElement>
+	
+	<uiElement elementId="menuUtente">
+		<authorizedGroup>registrati</authorizedGroup>
+	</uiElement>
+
+	<uiElement elementId="ModuloLibri.libri.insert">
+		<authorizedGroup>admins</authorizedGroup>
+	</uiElement>
+	
+	<uiElement elementId="ModuloLibri.libri.update">
+		<authorizedGroup>admins</authorizedGroup>
+	</uiElement>
+	
+	<uiElement elementId="ModuloLibri.libri.delete">
+		<authorizedGroup>admins</authorizedGroup>
+	</uiElement>
+	
+	<!-- <uiElement elementId="ModuloLibri.copie.insert">
+		<authorizedGroup>registrati</authorizedGroup>
+	</uiElement>  -->
+
+	<uiElement elementId="ModuloLibri.copie.update">
+		<authorizedGroup>admins</authorizedGroup>
+	</uiElement>
+</root>

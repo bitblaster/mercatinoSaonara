@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	 
+	    <!-- <property name="connection.url">jdbc:mysql://10.0.29.110/dd324c8d3d74446aa899f7ff65cb77043</property>
+	    <property name="connection.username">uaCN7Uxg6IAHV</property>
+	    <property name="connection.password">pO94m9fWI0kVR</property> -->
+	    
+ 	    <property name="connection.url">jdbc:mysql://localhost/mercatino</property>
+	    <property name="connection.username">root</property>
+	    <property name="connection.password">root</property>
+	    
+	    <!-- <property name="connection.url">jdbc:mysql://mysql.netsons.com/invvdyrd_mercatino</property>
+	    <property name="connection.username">invvdyrd_root</property>
+	    <property name="connection.password">saonara*123</property> -->
+		
+	    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+ 	 	
+	    <!-- type filter text
+<property name="hibernate.hbm2ddl.auto">create </property>
+ 	 	
+ 	 	<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+		<property name="hibernate.connection.username">CORSO</property>
+		<property name="hibernate.connection.password">CORSO</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@infoora01:1521:DBSVIL</property>
+		 -->
+		<property name="hibernate.show_sql">true</property>
+
+		<property name="hibernate.c3p0.min_size">5 </property>
+		<property name="hibernate.c3p0.max_size">25 </property>
+		<property name="hibernate.c3p0.acquire_increment">5 </property>
+		<property name="hibernate.c3p0.idle_test_period">3600 </property>
+		<!-- <property name="hibernate.c3p0.maxConnectionAge">14400 </property> -->
+		<property name="hibernate.c3p0.timeout">10800 </property>
+		
+		
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Utente.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/ProfiloUtente.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Disciplina.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Libro.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Copia.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Prenotazione.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/ClasseScolastica.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/WishList.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Visite.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

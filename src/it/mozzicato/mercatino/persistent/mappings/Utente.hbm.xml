@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 3-giu-2009 15.00.14 by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+	<class name="it.mozzicato.mercatino.persistent.Utente" table="Utente">
+		<id name="userId" access="field">
+			<column name="userId" />
+		</id>
+		<property name="firstName" access="field">
+			<column name="firstName" />
+		</property>
+		<property name="surname" access="field">
+			<column name="surname" />
+		</property>
+		<property name="password" access="field">
+			<column name="password" />
+		</property>
+		<property name="email" access="field">
+			<column name="email" />
+		</property>
+		<property name="telefono1" access="field">
+			<column name="telefono1" />
+		</property>
+		<property name="telefono2" access="field">
+			<column name="telefono2" />
+		</property>
+		<property name="gruppo" access="field">
+			<column name="gruppo" />
+		</property>
+	</class>
+</hibernate-mapping>
