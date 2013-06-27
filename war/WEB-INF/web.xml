@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+   <listener>
+  		<listener-class>it.mozzicato.mercatino.server.StartUp</listener-class> 
+  </listener>	
+
+   
+  <!-- Servlets -->    
+  <servlet>
+    <servlet-name>jwolfgwt_crudservice</servlet-name>
+    <servlet-class>it.mozzicato.mercatino.server.controllers.MercatinoWebCrudServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>jwolfgwt_crudservice</servlet-name>
+    <url-pattern>/mercatino/jwolfgwt_crudservice</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>jwolfgwt_export</servlet-name>
+    <servlet-class>it.infracom.jwolfgwt.server.service.ExportServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>jwolfgwt_export</servlet-name>
+    <url-pattern>/mercatino/jwolfgwt_export</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>jwolfgwt_login</servlet-name>
+    <servlet-class>it.mozzicato.mercatino.server.controllers.MercatinoWebLoginServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>jwolfgwt_login</servlet-name>
+    <url-pattern>/mercatino/jwolfgwt_login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>mercatino_service</servlet-name>
+    <servlet-class>it.mozzicato.mercatino.server.controllers.MercatinoServiceWebImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>mercatino_service</servlet-name>
+    <url-pattern>/mercatino/mercatino_service</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Mercatino.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
