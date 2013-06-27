@@ -30,7 +30,7 @@ public class CopyDialog {
 			
 			@Override
 			public void onCloseClick(CloseClickEvent event) {
-window.markForDestroy();				
+				window.markForDestroy();				
 			}
 		});
 	    window.addResizedHandler(new ResizedHandler() {
