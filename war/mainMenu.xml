@@ -1,9 +1,0 @@
-<menu>
-
-	<item itemId="menuLibri" name="Ricerca e inserimento Libri" icon="/mercatino/images/libri.png" moduleClass="it.mozzicato.mercatino.client.moduli.ModuloLibri" />
-	<item itemId="menuPrenotazioni" name="Le mie prenotazioni" icon="/mercatino/images/prenotazioni.png" moduleClass="it.mozzicato.mercatino.client.moduli.ModuloPrenotazioni" />
-	<item itemId="menuUtente" name="Gestione utente" icon="/mercatino/images/edituser.png" moduleClass="it.mozzicato.mercatino.client.moduli.ModuloUtente" />
-	<item itemId="menuClassi" name="Classi Scolastiche" moduleClass="it.mozzicato.mercatino.client.moduli.ModuloClassi" />
-	<item itemId="menuHelp" name="Informazioni" icon="/mercatino/jwolfgwt/images/help.png" uri="HELP" />
-	
-</menu>
