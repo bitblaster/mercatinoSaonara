@@ -1,0 +1,2 @@
+serviceClass: it.corvallis.jwolfgwt.shared.service.IWebLoginService
+path: 02A2337F72B75409C94BCBFDF25D5E97.gwt.rpc

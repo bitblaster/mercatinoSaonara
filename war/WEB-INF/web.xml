@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    metadata-complete="false"
+    version="3.0">
+<!--  
+  <listener>
+  		<listener-class>it.corvallis.jwolf.web.servlet.JWContextLoaderListener</listener-class> 
+  </listener>	
+  <context-param>
+ 		<param-name>jwServletsPackagesToScan</param-name>
+ 		<param-value>it.corvallis,it.mozzicato</param-value>
+  </context-param>
+  <context-param>
+ 		<param-name>jwConfigurationsPackagesToScan</param-name>
+ 		<param-value>it.mozzicato</param-value>
+  </context-param>
+-->
+
+   
+
+	<listener>
+		<listener-class>it.mozzicato.mercatino.server.StartUp</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>download_folder</param-name>
+		<param-value>/tmp/download</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>JWSessionEnhancerFilter</filter-name>
+		<filter-class>it.corvallis.jwolf.web.servlet.JWSessionEnhancerFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>JWSessionEnhancerFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>JWAuthenticationFilter</filter-name>
+		<filter-class>it.corvallis.jwolf.web.servlet.JWAuthenticationFilter</filter-class>
+<!-- 		
+		<init-param>
+			<description>Paths excluded from authentication</description>
+			<param-name>notAuthenticatedPaths</param-name>
+			<param-value></param-value>
+		</init-param>
+-->
+ 	</filter>
+	
+	<filter-mapping>
+		<filter-name>JWAuthenticationFilter</filter-name>
+		<url-pattern>/mercatino/mercatino_service</url-pattern>
+	</filter-mapping>
+	<!-- <filter>
+		<filter-name>JWAuthenticationFilter</filter-name>
+		<filter-class>it.corvallis.jwolf.web.servlet.JWAuthenticationFilter</filter-class>
+		<init-param>
+			<description>Paths excluded from authentication</description>
+			<param-name>notAuthenticatedPaths</param-name>
+			<param-value>/services/PluginService</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>JWAuthenticationFilter</filter-name>
+		<url-pattern>/julia_web/user_service</url-pattern>
+		<url-pattern>/julia_web/jwolfgwt_crudservice</url-pattern>
+		<url-pattern>/julia_web/jwolfgwt_export</url-pattern>
+		<url-pattern>/julia_web/analysis_details_service</url-pattern>
+		<url-pattern>/julia_web/billing_service</url-pattern>
+		<url-pattern>/downloadAnalysisFile</url-pattern>
+		<url-pattern>/coupon</url-pattern>
+		<url-pattern>/download</url-pattern>
+		<url-pattern>/billingret</url-pattern>
+		<url-pattern>/julia_web/licensing_service</url-pattern>
+		<url-pattern>/licenseUploadServlet</url-pattern>
+	</filter-mapping>
+ -->
+	<servlet>
+		<servlet-name>jwolfgwt_crudservice</servlet-name>
+		<servlet-class>it.corvallis.jwolfgwt.server.service.WebCrudServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jwolfgwt_crudservice</servlet-name>
+		<url-pattern>/mercatino/jwolfgwt_crudservice</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>jwolfgwt_export</servlet-name>
+		<servlet-class>it.corvallis.jwolfgwt.server.service.ExportServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jwolfgwt_export</servlet-name>
+		<url-pattern>/mercatino/jwolfgwt_export</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>jwolfgwt_login</servlet-name>
+		<servlet-class>it.mozzicato.mercatino.server.controllers.MercatinoWebLoginServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jwolfgwt_login</servlet-name>
+		<url-pattern>/mercatino/jwolfgwt_login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>mercatino_service</servlet-name>
+		<servlet-class>it.mozzicato.mercatino.server.controllers.MercatinoServiceWebImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>mercatino_service</servlet-name>
+		<url-pattern>/mercatino/mercatino_service</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Mercatino.html</welcome-file>
+	</welcome-file-list>
+	
+	<!-- <security-constraint>
+		<web-resource-collection>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>-->
+</web-app>

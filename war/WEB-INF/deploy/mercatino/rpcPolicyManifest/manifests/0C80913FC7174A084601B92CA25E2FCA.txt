@@ -1,0 +1,2 @@
+serviceClass: it.mozzicato.mercatino.client.services.IMercatinoServiceWeb
+path: F76C8D11987A0F52DA132821EB4D5777.gwt.rpc

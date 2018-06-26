@@ -1,0 +1,2 @@
+serviceClass: it.corvallis.jwolfgwt.shared.service.IWebCrudService
+path: A596BFF99ECA18DD563122289289AA32.gwt.rpc

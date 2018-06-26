@@ -1,0 +1,2 @@
+serviceClass: it.mozzicato.mercatino.client.services.IMercatinoWebLoginService
+path: 5D64050F75A632629C17FE46ADD1FA2F.gwt.rpc

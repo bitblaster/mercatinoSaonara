@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %level %c [%t] %m %ex%n" />
+		</Console>
+
+		<!-- Il files di log generato da questo appender contengono tutti i log 
+			dell'applicazione -->
+
+		<RollingFile name="rollingFile" fileName="/tmp/mercatino.log"
+			filePattern="/tmp/mercatino-%d{yyyy-MM}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d %level %c [%t] %m %X{reqURI} %X{ip} %X{userId} %X{userFN} %X{reqAK} %ex%n</Pattern>
+			</PatternLayout>
+			<Policies>
+			<SizeBasedTriggeringPolicy size="10 MB" />
+			<TimeBasedTriggeringPolicy  />
+			</Policies>
+			<DefaultRolloverStrategy max="20"/>
+		</RollingFile>
+		<!--  
+		<Logentries >
+			<PatternLayout pattern="%d %level %c [%t] %m %X{reqURI} %X{ip} %X{userId} %X{userFN} %X{reqAK} %ex%n"/>
+			<name>le</name>
+			<token>521938a7-c4ea-4a25-9b45-5f65ff5caf0d</token>
+		</Logentries>
+		-->	
+	</Appenders>
+	
+	<Loggers>
+		<Logger name="org.hibernate" level="INFO" />
+		<Logger name="org.apache.activemq" level="INFO" />
+		<Logger name="org.apache.cxf" level="INFO" />
+		<Logger name="org.springframework.beans" level="INFO" />
+		<Logger name="net.sf.ehcache" level="INFO" />
+		<Logger name="org.apache.wss4j" level="INFO" />
+		
+		<Root level="DEBUG">
+			<AppenderRef ref="rollingFile" level="DEBUG" />
+			<AppenderRef ref="STDOUT" level="TRACE" />
+			<!-- 
+			<AppenderRef ref="le" level="INFO"/>
+			 -->
+		</Root>
+		
+	</Loggers>
+
+</Configuration>

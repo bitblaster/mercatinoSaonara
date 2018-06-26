@@ -1,0 +1,7 @@
+# Module mercatino
+# RPC service class, partial path of RPC policy file
+it.mozzicato.mercatino.client.services.IMercatinoServiceWeb, F76C8D11987A0F52DA132821EB4D5777.gwt.rpc
+it.mozzicato.mercatino.client.services.IMercatinoWebLoginService, 5D64050F75A632629C17FE46ADD1FA2F.gwt.rpc
+it.corvallis.jwolfgwt.shared.service.IWebCrudService, A596BFF99ECA18DD563122289289AA32.gwt.rpc
+it.corvallis.jwolfgwt.shared.service.IWebLoginService, 02A2337F72B75409C94BCBFDF25D5E97.gwt.rpc
+it.corvallis.jwolfgwt.shared.service.IWebAuditService, 73B1F2BCAB471ECFB394FEAFA0E4C389.gwt.rpc

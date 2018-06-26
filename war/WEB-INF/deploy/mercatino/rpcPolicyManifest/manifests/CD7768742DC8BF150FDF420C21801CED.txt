@@ -1,0 +1,2 @@
+serviceClass: it.corvallis.jwolfgwt.shared.service.IWebAuditService
+path: 73B1F2BCAB471ECFB394FEAFA0E4C389.gwt.rpc

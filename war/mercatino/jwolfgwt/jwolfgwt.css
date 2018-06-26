@@ -1,0 +1,29 @@
+.profilationAuditingYes {
+	border-left: 3px solid green;
+}
+
+.profilationAuditingNo {
+	border-left: 3px solid red;
+}
+
+.profilationVisibilityHidden {
+	border-top: 3px solid red;
+}
+
+.profilationVisibilityDisabled {
+	border-top: 3px solid green;
+}
+
+.profilationGroupsNotPresent {
+	border-right: 3px solid red;
+}
+
+.profilationGroupsPresent {
+	border-right: 3px solid green;
+}
+
+.loginForm {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}

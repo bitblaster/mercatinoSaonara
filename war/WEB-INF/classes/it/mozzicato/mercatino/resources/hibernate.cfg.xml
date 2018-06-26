@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	 
+ 	    <!-- <property name="connection.url">jdbc:h2:~/app-root/data/mercatino;AUTO_SERVER=TRUE;AUTO_SERVER_PORT=15678</property>
+	    <property name="connection.username">sa</property>
+	    <property name="connection.password"></property> -->
+        <property name="hibernate.connection.datasource">java:comp/env/DB_JNDI</property>
+        
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<property name="hibernate.default_schema">pippo</property>
+        <!-- 
+        <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+         -->
+        
+ 	 	<property name="javax.persistence.validation.mode">none</property>
+ 	 	
+			<property name="hibernate.show_sql">true</property>
+		<!-- 
+		 -->
+		<property name="hibernate.c3p0.min_size">5 </property>
+		<property name="hibernate.c3p0.max_size">25 </property>
+		<property name="hibernate.c3p0.acquire_increment">5 </property>
+		<property name="hibernate.c3p0.idle_test_period">3600 </property>
+		<!-- <property name="hibernate.c3p0.maxConnectionAge">14400 </property> -->
+		<property name="hibernate.c3p0.timeout">10800 </property>
+		
+		<!-- <mapping resource="it/mozzicato/mercatino/persistent/mappings/Utente.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/ProfiloUtente.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Disciplina.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Libro.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Copia.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Prenotazione.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/ClasseScolastica.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/WishList.hbm.xml"/>
+		<mapping resource="it/mozzicato/mercatino/persistent/mappings/Visite.hbm.xml"/> -->
+	</session-factory>
+</hibernate-configuration>
