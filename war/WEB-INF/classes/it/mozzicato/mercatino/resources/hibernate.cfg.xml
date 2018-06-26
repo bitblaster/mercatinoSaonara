@@ -6,7 +6,7 @@
  	    <!-- <property name="connection.url">jdbc:h2:~/app-root/data/mercatino;AUTO_SERVER=TRUE;AUTO_SERVER_PORT=15678</property>
 	    <property name="connection.username">sa</property>
 	    <property name="connection.password"></property> -->
-        <property name="hibernate.connection.datasource">jboss/datasources/defaultDS</property>
+        <property name="hibernate.connection.datasource">java:comp/env/jboss/datasources/defaultDS</property>
         
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
